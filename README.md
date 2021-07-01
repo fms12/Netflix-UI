@@ -1,3 +1,15 @@
+# Netflix-Clone
+
+
+
+A Netflix UI clone `React.js` and `node`.:
+
+![React](https://img.shields.io/badge/react%20js-17.0.2-blue/?style=for-the-badge&logo=react)  ![PYTHON](https://img.shields.io/node/v/passport?style=for-the-badge)
+
+
+![App Screenshot](https://i.ibb.co/MNK6jzc/Screenshot-57.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

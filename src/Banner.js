@@ -37,6 +37,8 @@ function Banner() {
             <div className="banner_contents">
                 {/* title */}
                 <h1 className="banner_title">
+                    // question mark here is optional chaining means if the movie title is null/ undefine it will not through the error just directely print 
+                    // the null/undefine
                     {movie?.title || movie?.name || movie?.original_name}
                 </h1>
 

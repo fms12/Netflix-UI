@@ -29,19 +29,54 @@ function Row({ title, fetchUrl, isLargeRow }) {
     },
   };
 
+  // exmaple to understand 
+   /**
+      suppose there is function name called movieTrailer which is promise based function
+      function movieTrailer(moive){
+          return new Promise(function(resolve,reject)){
+              resolve(movie);
+              reject("");
+            }
+          } 
+   **/
+  
+  // this is promise based function using .then 
   const handleClick = (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
       movieTrailer(movie?.name || '')
       .then((url) =>{
+        //callback function will excute after when the promise get resolved
       const urlParams = new URLSearchParams(new URL(url).search);
       setTrailerUrl(urlParams.get('v'));
       } )
+      // here to catch the error if the promise rejected then it will reject the promise
       .catch ((error) => console.log(error));
     }
   };
+  
+  // now  using async function
+  
+  /**
+ * const handleClick = async((movie) =>{
+  *  if(trailerUrl){
+  *      setTrailerUrl(""); 
+  *    }
+  * try{
+  *    let url = movieTrailer(movie?.name || '');
+  * const urlParams = new  URLSearchParams(new URL(url).search);
+  * setTrailerUrl(urlParams.get('v'));
+  *    }
+  *   catch((err)=>{
+  *    console.log(err);
+  *   })
+ * }
+ * 
+ */
+  
 
+  
   return (
     <div className="row">
       <h2>{title}</h2>
